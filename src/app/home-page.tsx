@@ -1,8 +1,9 @@
+'use client';
 import Layout from '@components/common/Layout';
 import { getLocalStorage } from '@utils/localStorage/helper';
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
 
-export default function Home() {
+export default function Page() {
   const router = useRouter();
 
   if (getLocalStorage('isVisited')) {
