@@ -1,11 +1,7 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -20,35 +16,16 @@
     "incremental": true,
     "isolatedModules": true,
     "baseUrl": "src",
-    "typeRoots": [
-      "node_modules/@types",
-      "src/@types/*"
-    ],
+    "typeRoots": ["node_modules/@types", "src/@types/*"],
     "paths": {
-      "@components/*": [
-        "./components/*"
-      ],
-      "@apis/*": [
-        "./apis/*"
-      ],
-      "@constants/*": [
-        "./constants/*"
-      ],
-      "@features/*": [
-        "./features/*"
-      ],
-      "@hooks/*": [
-        "./hooks/*"
-      ],
-      "@utils/*": [
-        "./utils/*"
-      ],
-      "@public/*": [
-        "../public/*"
-      ],
-      "@config": [
-        "../config.ts"
-      ]
+      "@components/*": ["./components/*"],
+      "@apis/*": ["./apis/*"],
+      "@constants/*": ["./constants/*"],
+      "@features/*": ["./features/*"],
+      "@hooks/*": ["./hooks/*"],
+      "@utils/*": ["./utils/*"],
+      "@public/*": ["../public/*"],
+      "@config": ["../config.ts"]
     },
     "plugins": [
       {
@@ -61,9 +38,8 @@
     "**/*.ts",
     "**/*.tsx",
     "src",
-    ".next/types/**/*.ts"
+    ".next/types/**/*.ts",
+    "app"
   ],
-  "exclude": [
-    "node_modules"
-  ]
+  "exclude": ["node_modules"]
 }
