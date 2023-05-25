@@ -39,7 +39,6 @@ export default function BeginPage() {
   const router = useRouter();
 
   return (
-    <Layout>
       <SwiperWrapper>
         <Swiper
           navigation={true}
@@ -151,6 +150,5 @@ export default function BeginPage() {
           </SwiperSlide>
         </Swiper>
       </SwiperWrapper>
-    </Layout>
   );
 }
