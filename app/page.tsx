@@ -1,5 +1,5 @@
-import HomePage from './home-page';
 import { Metadata } from 'next';
+import HomePage from './home-page';
 export const metadata: Metadata = {
   title: 'Atties',
   description: 'Welcome to Atties',

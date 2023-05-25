@@ -3,7 +3,7 @@ import Layout from '@components/common/Layout';
 import { getLocalStorage } from '@utils/localStorage/helper';
 import { useRouter } from 'next/navigation';
 
-export default function Page() {
+export default function HomePage() {
   const router = useRouter();
 
   if (getLocalStorage('isVisited')) {
