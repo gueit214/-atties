@@ -2443,7 +2443,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mdx-js/react@npm:^2.1.5":
+"@mdx-js/react@npm:^2.1.5, @mdx-js/react@npm:^2.3.0":
   version: 2.3.0
   resolution: "@mdx-js/react@npm:2.3.0"
   dependencies:
@@ -11471,7 +11471,7 @@ __metadata:
     "@babel/core": ^7.20.7
     "@headlessui/react": ^1.7.15
     "@headlessui/tailwindcss": ^0.1.2
-    "@mdx-js/react": ^1.6.22
+    "@mdx-js/react": ^2.3.0
     "@reduxjs/toolkit": ^1.9.5
     "@stomp/stompjs": ^7.0.0
     "@storybook/addon-actions": ^6.5.15
