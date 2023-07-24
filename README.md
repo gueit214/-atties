@@ -9,46 +9,77 @@
 5. [우리의 성장기](#우리의-성장기)
 6. [폴더 구조 📁](#폴더-구조-📁)
 
-## 프로젝트 소개 🎨
 
-졸업전시회에 대한 치열한 준비에도 불구하고, 많은 미술 대학생들의 졸업작품이 일회성 행사에 그치고, 후에 방치되거나 폐기되는 상황에 대해 대단히 아쉬움을 느꼈습니다. 그러므로, 이러한 작품들이 계속해서 사랑받을 수 있는 방법을 제공하고자 '아띠즈'를 설립하였습니다.
+## Links
 
-아띠즈는 졸업작품을 거래할 수 있는 플랫폼으로, 컬렉터들이 저렴한 비용으로 미술 작품을 구입하고, 미술 대학생들은 경제적 수익을 얻을 수 있으며, 동시에 자신의 작품을 세상에 널리 알릴 수 있는 소중한 기회를 제공하는 것이 목표입니다. 이를 통해, 미술 작품들이 영구적으로 소중하게 다루어지고, 그 가치를 지속적으로 인정받을 수 있도록 하는 것이 우리의 목표입니다.
+### [Ver 1.0 Github](https://github.com/Att-ies)
+### [Ver 2.0 서비스 링크](https://atties.vercel.app/)
 
-### Links
+# Atties Ver.2.0 업데이트 내역
+## 리팩토링 및 성능 개선
 
-- [기존 팀 프로젝트](https://github.com/Att-ies)
-- [기존 팀 프로젝트-프론트엔드](https://github.com/Att-ies/frontend)
-- [서비스](https://atties.vercel.app/)
-  - 테스트 계정 ID : test01
-  - 테스트 계정 PW : abcd1234
 
-## Atties Ver.2.0 업데이트 내역
+<aside>
+🎯 리팩토링의 주된 목표는 페이지 로딩 속도와 보안성능의 향상입니다.
 
-✅ 프로젝트 성능 향상 : LCP 17초 -> 12.9초 단축 / lighthouse 성능 점수 47점 -> 62점 상승
+</aside>
 
-## 프로젝트 성능 향상 보고서 📈
+## 1. 렌더링 최적화
 
-### 프로젝트 개요
+- `React.memo`를 활용하여 이전에 렌더링한 결과를 메모이징하고, 이후 동일한 props로 렌더링 되는 경우 재사용하여 렌더링을 최적화하였습니다.
+- 이 방법을 사용함으로써, 복잡한 컴포넌트의 렌더링 횟수를 줄이고 페이지 로드 시간을 단축시키는 데 크게 기여하였습니다.
+- 기존 서비스(좌), 리팩토링 후 서비스(우)
+![Alt text](https://file.notion.so/f/s/06de4a4a-02e5-4fa7-a4e0-cc17fe81783e/Jun-15-2023_11-35-12.gif?id=3ea6b1d8-24fa-4403-a407-073d830fab6e&table=block&spaceId=0634ecca-151f-489c-958f-a813ecd17586&expirationTimestamp=1690279200000&signature=MYHxPNwQyD03_JkGxrMr-YR4t_9LLYG2SJNawi_S0Ck&downloadName=Jun-15-2023+11-35-12.gif)
 
-이 프로젝트는 Atties 팀의 기존 프로젝트에 대한 성능 개선 작업을 통해 리팩토링을 진행한 개인 프로젝트입니다. 초기에는 페이지 로드 시간 (LCP - Largest Contentful Paint)이 17.8초에 이르고, lighthouse 성능 점수가 47점이었습니다. 이 프로젝트의 주요 목표는 이러한 성능 지표를 개선하는 것이었습니다.
+## 2. Server Side에서 Data 받아오기
+- 기존 서비스
+![기존 서비스](https://file.notion.so/f/s/964e0c38-cced-4bf9-b15f-6406ccc4309d/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2023-06-14_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_7.04.21.png?id=571535c1-e92a-4503-9de5-7abe2f801d17&table=block&spaceId=0634ecca-151f-489c-958f-a813ecd17586&expirationTimestamp=1690279200000&signature=t0lGiMt1rqbwdhjk3Z4nsaUFdAJL4x2uV1mvPsuTIaU&downloadName=%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA+2023-06-14+%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE+7.04.21.png)
 
-### 성능 향상 결과
+- 리팩토링 후 서비스
+![리팩토링 후 서비스](https://file.notion.so/f/s/dd0d2d27-396d-43ea-a682-964cfa770352/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2023-06-14_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_7.03.43.png?id=52c6dc76-2e53-4761-bbf5-3acfdfdd8ad0&table=block&spaceId=0634ecca-151f-489c-958f-a813ecd17586&expirationTimestamp=1690279200000&signature=4l_Gq2NtZPAdR1ULZUXoYhIrRMR2FpbqIF9javWc2j0&downloadName=%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA+2023-06-14+%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE+7.03.43.png)
 
-프로젝트를 진행하고 나서, LCP는 12.9초로 줄어들었고, lighthouse 성능 점수는 62점으로 상승하였습니다. 이는 리팩토링을 통해 얻은 결과로, 기존 프로젝트에 비해 상당한 성능 개선이 이루어진 것을 보여줍니다.
 
-### 리팩토링 및 성능 향상 방법
+- 서버로부터 HTML을 받아온 이후에 데이터를 동기적으로 가져오는 기존의 방식을 개선하였습니다.
+- 이제는 서버에서 먼저 데이터를 불러와 HTML을 생성하고, 이를 클라이언트에 전달하는 서버 사이드 렌더링(SSR) 방식을 사용합니다.
+- 이로 인해 초기 로딩 속도가 크게 향상되었습니다.
+- 홈 화면과 프로필 페이지 같은 페이지가 자주 변경되지 않는 부분에 대해서는, CSR보다는 SSR 방식이 더 적합하다고 판단하였습니다.
 
-리팩토링을 진행하는 중, React.memo를 사용하여 성능을 개선하는 방법을 도입했습니다. React.memo는 React 컴포넌트의 불필요한 재렌더링을 줄이는 방법으로, 컴포넌트가 이전에 렌더링한 결과를 메모이징하고, 이후 동일한 props로 렌더링되는 경우 재사용합니다.
+## 3. 토큰 저장 위치 변경
 
-이 방법을 사용함으로써, 복잡한 컴포넌트의 렌더링 횟수를 줄이고 페이지 로드 시간을 단축시키는 데 크게 기여하였습니다. 따라서, 이는 LCP의 감소와 lighthouse 성능 점수의 상승에 중요한 역할을 하였습니다.
+- 기존에는 localStorage에 Access Token과 Refresh Token을 저장하는 방식을 사용했으나, 이 방식은 XXR 공격에 대해 매우 취약하다는 결정적인 단점이 있었습니다.
+- 이를 보완하기 위해, Access Token과 Refresh Token을 http only Cookie에 저장하도록 방식을 개선하였습니다.
+- [고민의 흔적](https://github.com/guesung/atties-ver2.0/issues/11)
 
-- [리팩토링하며 작성한 글](https://peter-coding.tistory.com/339)
+## 4. 반응형 개선
+- 기존 서비스
+![Jun-15-2023 14-33-41.gif](https://file.notion.so/f/s/114289b5-f5d6-4c32-b284-8ce1dc97e283/Jun-15-2023_14-33-41.gif?id=15d5f178-555b-42f4-a527-0710868ec35d&table=block&spaceId=0634ecca-151f-489c-958f-a813ecd17586&expirationTimestamp=1690279200000&signature=FTRCFLOWPjuuRvYmHXOHGruOwZgvdMQOxQJqvvGXKMc&downloadName=Jun-15-2023+14-33-41.gif)
+- 리팩토링 후 서비스
+![Jun-15-2023 14-33-29.gif](https://file.notion.so/f/s/2dd10f16-2c0f-4ccd-9eea-77e36d19da51/Jun-15-2023_14-33-29.gif?id=466834f9-856c-4c25-9a3a-16b3eaff3ba4&table=block&spaceId=0634ecca-151f-489c-958f-a813ecd17586&expirationTimestamp=1690279200000&signature=SSjHhksMUnMCY-XBdHwmW_8r0gin8RSZlN4t_FBzVm0&downloadName=Jun-15-2023+14-33-29.gif)
 
-| 리팩토링 전                                                                                                                                                               | 리팩토링 후                                                                                                                                                               |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <img src='https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FLfW5v%2Fbtsc1NuzmRq%2FjJQlmePxqSF3wOOkfTFZ9K%2Fimg.png' /> | <img src='https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FejYjVm%2Fbtsc99pYH1A%2FZdZZhDKAB6KuCBnIGQcA1K%2Fimg.png'/> |
+- px 단위를 rem으로 변경하여 화면 크기에 맞게 반응형 디자인을 구현하였습니다.
 
+---
+
+# 성능 향상 결과
+
+### 기존 LCP 3.5초 → 1.1초로 향상
+
+- 기존 서비스
+
+![Alt text](image-1.png)
+
+
+- 리팩토링 후 서비스
+
+![Alt text](image-2.png)
+
+- 기존 서비스
+
+<video src="RPReplay_Final1686795768.mp4" controls title="Title"></video>
+
+- 리팩토링 후 서비스
+
+<video src="RPReplay_Final1686795824%20(1).mp4" controls title="Title"></video>
 ---
 
 ## 컨밴션 🌈
