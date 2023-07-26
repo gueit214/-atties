@@ -53,22 +53,17 @@
 
 ### 기존 LCP 3.5초 → 1.1초로 향상
 
-- 기존 서비스
+|기존서비스|리팩토링 후 서비스|
+|:-----|-----:|
+|<img  src="https://github.com/guesung/atties-ver2.0/assets/62178788/d2333521-5ce5-408b-8002-10883fad8097" /> |<img  src="https://github.com/guesung/atties-ver2.0/assets/62178788/bca19442-d8e1-4abb-b234-4437ef71b0f9" /> |
 
-![Alt text](image-1.png)
+
+### 기존 로그인 시간 7초 → 3초로 향상
+|기존서비스|리팩토링 후 서비스|
+|:-----|-----:|
+|<video  autoplay src="https://github.com/guesung/atties-ver2.0/assets/62178788/64c2c2eb-7481-4503-85b4-3f426338d7b5"></video> | <video  autoplay src="https://github.com/guesung/atties-ver2.0/assets/62178788/0a4cbdb5-9249-4e79-a5fe-6dff77ea9cfa"></video>|
 
 
-- 리팩토링 후 서비스
-
-![Alt text](image-2.png)
-
-- 기존 서비스
-
-<video src="RPReplay_Final1686795768.mp4" controls title="Title"></video>
-
-- 리팩토링 후 서비스
-
-<video src="RPReplay_Final1686795824%20(1).mp4" controls title="Title"></video>
 ---
 
 ## 컨밴션 🌈
