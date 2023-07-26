@@ -5,19 +5,12 @@
 ### [Ver 1.0 Github](https://github.com/Att-ies)
 ### [Ver 2.0 서비스 링크](https://atties.vercel.app/)
 
-# Atties Ver.2.0 업데이트 내역
-## 리팩토링 및 성능 개선
 
-
-<aside>
-🎯 리팩토링의 주된 목표는 페이지 로딩 속도와 보안성능의 향상입니다.
-
-</aside>
-
+# Atties Ver.2.0 리팩토링 및 성능 개선
 ## 1. 렌더링 최적화
 
 - `React.memo`를 활용하여 이전에 렌더링한 결과를 메모이징하고, 이후 동일한 props로 렌더링 되는 경우 재사용하여 렌더링을 최적화하였습니다.
-- 또한, react-query의 기본 옵션인 `refetchOnWindowFocus`를 해제하여 새로 클릭 시 다시 렌더링되는 현상을 해결하였습니다.
+- 또한, react-query의 기본 옵션인 `refetchOnWindowFocus`를 해제하여 브라우저 클릭 시 다시 렌더링되는 현상을 해결하였습니다.
 - 기존 서비스(좌), 리팩토링 후 서비스(우)
 ![Jun-15-2023 11-35-12](https://github.com/guesung/atties-ver2.0/assets/62178788/fee8f644-32e8-43ea-9300-1246c36929f4)
 
@@ -28,16 +21,15 @@
 |:-----|-----:|
 |<img width="862" alt="스크린샷 2023-06-14 오후 7 04 21" src="https://github.com/guesung/atties-ver2.0/assets/62178788/9004ea11-f1ba-4538-9ae0-371faf9400a3"> | <img width="864" alt="스크린샷 2023-06-14 오후 7 03 43" src="https://github.com/guesung/atties-ver2.0/assets/62178788/658c3676-6ec6-4c89-8e24-2cdde1f896d2"> |
 
-- 서버로부터 HTML을 받아온 이후에 데이터를 동기적으로 가져오는 기존의 방식을 개선하였습니다.
-- 서버로부터 HTML을 받아온 이후에, 데이터를 동기적으로 가져오는 기존의 방식을 개선하였습니다.
+- 서버로부터 HTML을 받아온 이후에, 데이터를 동기적으로 가져오는 기존의 방식(CSR)을 개선하였습니다.
 - 서버에서 먼저 데이터를 불러와 HTML을 생성하고, 이를 클라이언트에 전달하는 서버 사이드 렌더링(SSR) 방식을 사용합니다.
-- 홈 화면과 프로필 페이지 같은 페이지가 자주 변경되지 않는 부분에 대해서는, CSR보다는 SSR 방식이 더 적합하다고 판단하였습니다.
+- 홈 화면과 프로필 페이지 같은 페이지가 자주 변경되지 않는 부분에 대해서는, 클라이언트에서 데이터를 받아오는 것보다 서버에서 미리 데이터를 받아오는 방식이 더 적합하다고 판단하였습니다.
 
 ## 3. 토큰 저장 위치 변경
 
 - 기존에는 localStorage에 Access Token과 Refresh Token을 저장하는 방식을 사용했으나, 이 방식은 XXR 공격에 대해 매우 취약하다는 결정적인 단점이 있었습니다.
 - 이를 보완하기 위해, Access Token과 Refresh Token을 http only Cookie에 저장하도록 방식을 개선하였습니다.
-- [고민의 흔적](https://github.com/guesung/atties-ver2.0/issues/11)
+- [이러한 고민의 흔적](https://github.com/guesung/atties-ver2.0/issues/11)
 
 ## 4. 반응형 개선
 
@@ -45,7 +37,7 @@
 |:-----|-----:|
 |<img  src="https://github.com/guesung/atties-ver2.0/assets/62178788/32eb94f1-c2c3-4e8c-b2e1-de4fbe18ffb3" /> |<img  src="https://github.com/guesung/atties-ver2.0/assets/62178788/f48ef3d5-28d6-4f94-ad75-3dd20e9657a1" /> |
 
-- px 단위를 rem으로 변경하여 화면 크기에 맞게 반응형 디자인을 구현하였습니다.
+- px 단위를 rem으로 변경하고, `휴대폰 가로 사이즈`에 맞게 화면을 보여주기 위해 반응형 디자인을 구현하였습니다.
 
 ---
 
@@ -58,13 +50,15 @@
 |<img  src="https://github.com/guesung/atties-ver2.0/assets/62178788/d2333521-5ce5-408b-8002-10883fad8097" /> |<img  src="https://github.com/guesung/atties-ver2.0/assets/62178788/bca19442-d8e1-4abb-b234-4437ef71b0f9" /> |
 
 
-### 기존 로그인 시간 7초 → 3초로 향상
+### 기존 로그인 로딩 시간 7초 → 3초로 향상
 |기존서비스|리팩토링 후 서비스|
 |:-----|-----:|
 |<video  autoplay src="https://github.com/guesung/atties-ver2.0/assets/62178788/64c2c2eb-7481-4503-85b4-3f426338d7b5"></video> | <video  autoplay src="https://github.com/guesung/atties-ver2.0/assets/62178788/0a4cbdb5-9249-4e79-a5fe-6dff77ea9cfa"></video>|
 
 
 ---
+
+# Atties Team 문서
 
 ## 컨밴션 🌈
 
