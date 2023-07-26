@@ -33,14 +33,10 @@
 
 
 ## 2. Server Side에서 Data 받아오기
-- 기존 서비스
-<img width="862" alt="스크린샷 2023-06-14 오후 7 04 21" src="https://github.com/guesung/atties-ver2.0/assets/62178788/9004ea11-f1ba-4538-9ae0-371faf9400a3">
 
-
-- 리팩토링 후 서비스
-<img width="864" alt="스크린샷 2023-06-14 오후 7 03 43" src="https://github.com/guesung/atties-ver2.0/assets/62178788/658c3676-6ec6-4c89-8e24-2cdde1f896d2">
-
-
+|기존서비스|리팩토링 후 서비스|
+|:-----|-----:|
+|<img width="862" alt="스크린샷 2023-06-14 오후 7 04 21" src="https://github.com/guesung/atties-ver2.0/assets/62178788/9004ea11-f1ba-4538-9ae0-371faf9400a3"> | <img width="864" alt="스크린샷 2023-06-14 오후 7 03 43" src="https://github.com/guesung/atties-ver2.0/assets/62178788/658c3676-6ec6-4c89-8e24-2cdde1f896d2"> |
 
 - 서버로부터 HTML을 받아온 이후에 데이터를 동기적으로 가져오는 기존의 방식을 개선하였습니다.
 - 이제는 서버에서 먼저 데이터를 불러와 HTML을 생성하고, 이를 클라이언트에 전달하는 서버 사이드 렌더링(SSR) 방식을 사용합니다.
@@ -54,10 +50,10 @@
 - [고민의 흔적](https://github.com/guesung/atties-ver2.0/issues/11)
 
 ## 4. 반응형 개선
-- 기존 서비스
-![Jun-15-2023 14-33-41.gif](https://file.notion.so/f/s/114289b5-f5d6-4c32-b284-8ce1dc97e283/Jun-15-2023_14-33-41.gif?id=15d5f178-555b-42f4-a527-0710868ec35d&table=block&spaceId=0634ecca-151f-489c-958f-a813ecd17586&expirationTimestamp=1690279200000&signature=FTRCFLOWPjuuRvYmHXOHGruOwZgvdMQOxQJqvvGXKMc&downloadName=Jun-15-2023+14-33-41.gif)
-- 리팩토링 후 서비스
-![Jun-15-2023 14-33-29.gif](https://file.notion.so/f/s/2dd10f16-2c0f-4ccd-9eea-77e36d19da51/Jun-15-2023_14-33-29.gif?id=466834f9-856c-4c25-9a3a-16b3eaff3ba4&table=block&spaceId=0634ecca-151f-489c-958f-a813ecd17586&expirationTimestamp=1690279200000&signature=SSjHhksMUnMCY-XBdHwmW_8r0gin8RSZlN4t_FBzVm0&downloadName=Jun-15-2023+14-33-29.gif)
+
+|기존서비스|리팩토링 후 서비스|
+|:-----|-----:|
+|<img  src="https://github.com/guesung/atties-ver2.0/assets/62178788/32eb94f1-c2c3-4e8c-b2e1-de4fbe18ffb3" /> |<img  src="https://github.com/guesung/atties-ver2.0/assets/62178788/f48ef3d5-28d6-4f94-ad75-3dd20e9657a1" /> |
 
 - px 단위를 rem으로 변경하여 화면 크기에 맞게 반응형 디자인을 구현하였습니다.
 
