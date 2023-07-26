@@ -29,14 +29,17 @@
 - `React.memo`를 활용하여 이전에 렌더링한 결과를 메모이징하고, 이후 동일한 props로 렌더링 되는 경우 재사용하여 렌더링을 최적화하였습니다.
 - 이 방법을 사용함으로써, 복잡한 컴포넌트의 렌더링 횟수를 줄이고 페이지 로드 시간을 단축시키는 데 크게 기여하였습니다.
 - 기존 서비스(좌), 리팩토링 후 서비스(우)
-![Alt text](https://file.notion.so/f/s/06de4a4a-02e5-4fa7-a4e0-cc17fe81783e/Jun-15-2023_11-35-12.gif?id=3ea6b1d8-24fa-4403-a407-073d830fab6e&table=block&spaceId=0634ecca-151f-489c-958f-a813ecd17586&expirationTimestamp=1690279200000&signature=MYHxPNwQyD03_JkGxrMr-YR4t_9LLYG2SJNawi_S0Ck&downloadName=Jun-15-2023+11-35-12.gif)
+![Jun-15-2023 11-35-12](https://github.com/guesung/atties-ver2.0/assets/62178788/fee8f644-32e8-43ea-9300-1246c36929f4)
+
 
 ## 2. Server Side에서 Data 받아오기
 - 기존 서비스
-![기존 서비스](https://file.notion.so/f/s/964e0c38-cced-4bf9-b15f-6406ccc4309d/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2023-06-14_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_7.04.21.png?id=571535c1-e92a-4503-9de5-7abe2f801d17&table=block&spaceId=0634ecca-151f-489c-958f-a813ecd17586&expirationTimestamp=1690279200000&signature=t0lGiMt1rqbwdhjk3Z4nsaUFdAJL4x2uV1mvPsuTIaU&downloadName=%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA+2023-06-14+%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE+7.04.21.png)
+<img width="862" alt="스크린샷 2023-06-14 오후 7 04 21" src="https://github.com/guesung/atties-ver2.0/assets/62178788/9004ea11-f1ba-4538-9ae0-371faf9400a3">
+
 
 - 리팩토링 후 서비스
-![리팩토링 후 서비스](https://file.notion.so/f/s/dd0d2d27-396d-43ea-a682-964cfa770352/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2023-06-14_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_7.03.43.png?id=52c6dc76-2e53-4761-bbf5-3acfdfdd8ad0&table=block&spaceId=0634ecca-151f-489c-958f-a813ecd17586&expirationTimestamp=1690279200000&signature=4l_Gq2NtZPAdR1ULZUXoYhIrRMR2FpbqIF9javWc2j0&downloadName=%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA+2023-06-14+%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE+7.03.43.png)
+<img width="864" alt="스크린샷 2023-06-14 오후 7 03 43" src="https://github.com/guesung/atties-ver2.0/assets/62178788/658c3676-6ec6-4c89-8e24-2cdde1f896d2">
+
 
 
 - 서버로부터 HTML을 받아온 이후에 데이터를 동기적으로 가져오는 기존의 방식을 개선하였습니다.
