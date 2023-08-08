@@ -4952,14 +4952,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:18.0.24":
-  version: 18.0.24
-  resolution: "@types/react@npm:18.0.24"
+"@types/react@npm:18.2.19":
+  version: 18.2.19
+  resolution: "@types/react@npm:18.2.19"
   dependencies:
     "@types/prop-types": "*"
     "@types/scheduler": "*"
     csstype: ^3.0.2
-  checksum: 7d06125bac61e1c6661e5dfbeeeb56d5b6d1d4c743292faebaa6b0f30f8414c7af3cadf674923fd86e4ca14e82566ff9156cd40c56786be024600c31b97d6c03
+  checksum: 1ef657b90c7413451bbac2fd2fbce4f8a093941bc5041d344ab9833bc113c8eebf6318dae8aeeb1a0f922f15bc772507e6aaa0c7b51847b5f7302921c8dd6740
   languageName: node
   linkType: hard
 
@@ -11488,7 +11488,7 @@ __metadata:
     "@tanstack/react-query": ^4.29.7
     "@types/babel__core": ^7
     "@types/node": 18.11.7
-    "@types/react": 18.0.24
+    "@types/react": 18.2.19
     "@types/react-dom": 18.2.5
     "@types/react-signature-canvas": ^1
     "@types/sockjs-client": ^1
